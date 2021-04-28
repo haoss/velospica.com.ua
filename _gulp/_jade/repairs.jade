@@ -1,0 +1,151 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Ремонт' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Ремонт' + ' - Спица' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      
+      .breadcrumbs
+        .container
+          ul
+            li
+              a(href="index.html")
+                i.fa.fa-home
+                | Главная
+      
+      section.section.angle.angle--reverse.no--p-bottom
+        
+        +angleWrapper
+        
+        .container
+          .row
+            .col-lg-6.col-md-7.col-sm-8
+              
+              .angle__img
+                img(src="./img/about-img-1.jpg", alt="").img-responsive
+          
+              .section__head.section__head--yellow.section__head--left.section__head--thin
+                .section__head-wrapper
+                  div
+                    .section__head-icon
+                      div
+                        +imgSvgVelo
+                  div
+                    h1 Ремонт
+              
+              .angle__content
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+    
+      section.section.properties
+        .container
+          
+          .section__head.section__head--green
+            .section__head-wrapper
+              div
+                .section__head-icon
+                  div
+                    +imgSvgVelo
+              div
+                h1 Ремонтные услуги
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        
+          .row
+            .col-md-10.col-md-push-1
+              
+              .properties__content
+                
+                - for (var i=0; i<2; i++) {
+                .properties__content-head Колёса
+                .table-responsive
+                  table.properties__content-table
+                    thead
+                      tr
+                        th(align="left" nowrap) Наименование услуги
+                        th(align="right" nowrap) Цена, грн
+                    tbody
+                      tr
+                        td Разборка
+                        td(align="right") 50
+                      tr
+                        td Сборка
+                        td(align="right") 70
+                      tr
+                        td Центровка
+                        td(align="right") 
+                      tr
+                        td Перебортировка
+                        td(align="right") 
+              
+                .properties__content-head ТРАНСМИССИЯ
+                .table-responsive
+                  table.properties__content-table
+                    thead
+                      tr
+                        th(align="left" nowrap) Наименование услуги
+                        th(align="right" nowrap) Цена, грн
+                    tbody
+                      tr
+                        td Регулировка одного переключателя
+                        td(align="right") 30
+                      tr
+                        td Установка переключателя (с регулировкой)
+                        td(align="right") 40
+                      tr
+                        td Установка манеток
+                        td(align="right") 30
+                      tr
+                        td Установка рубашек и тросиков на один переключатель
+                        td(align="right") 15
+                      tr
+                        td Снятие каретки
+                        td(align="right") 50
+                      tr
+                        td Снятие шатунов
+                        td(align="right") 30
+                      tr
+                        td Снятие/установка кассеты (трещётки)
+                        td(align="right") 30
+                      tr
+                        td Установка каретки
+                        td(align="right") 40
+                      tr
+                        td Снятие/установка цепи
+                        td(align="right") 40
+                      tr
+                        td Установка/снятие педалей
+                        td(align="right") 20
+                - }
+              
+      
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
+    script().
+      (function(){
+        $('.header__nav-ul li.header__nav-li:nth-child(3)').addClass('active');
+        $('.angle__wrapper-right').attr('style', 'background-image: url(\'./img/about-img-5.jpg\')')
+        $('.angle__img img').attr('src', './img/about-img-5.jpg')
+      })();

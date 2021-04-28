@@ -1,0 +1,67 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Заглушка' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Заглушка' + ' - Спица' //title страницы для генерации верстки  
+
+  head
+    meta(charset='utf-8')
+  
+    title= pageTitle
+    meta(name='description', content='')
+  
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+  
+    link(rel='stylesheet', href='./font/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='./font/webfontkit-20180301-053825/stylesheet.css')
+    link(rel='stylesheet', href='./css/main.css')
+
+  body
+    
+    .stub__wrapper
+      .stub__container
+        .stub__content
+          .stub__content-wrapper
+            img(src="./img/stub-logo.png", alt="").stub__content-logo 
+            img(src="./img/stub-text.png", alt="").stub__content-text
+            .stub__content-title Упс! Мы еще не готовы!
+            p Извините, сейчас сайт находится на техническом обслуживании. Загляните чуть позже, спасибо. 
+              br
+              | Мы ценим ваше терпение! 
+            .stub__content-social
+              div
+                .stub__content-social_title Наши контакты
+                .stub__content-contact
+                  i.fa.fa-phone
+                  a(href="#!") +3(099) 999 89 98
+                .stub__content-contact
+                  i.fa.fa-envelope
+                  a(href="#!") info@gmail.com
+              div
+                .stub__content-social_title Мы в соц сетях
+                .stub__content-links
+                  a(href="#!" target="_blank")
+                    i.fa.fa-facebook
+                  a(href="#!" target="_blank")
+                    i.fa.fa-twitter
+                  a(href="#!" target="_blank")
+                    i.fa.fa-linkedin
+                  a(href="#!" target="_blank")
+                    i.fa.fa-instagram
+                  a(href="#!" target="_blank")
+                    i.fa.fa-google-plus
+                
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    //- script(src="./js/libs.js")
+    //- include ./_include/_footer-js
+    //- script(src="./js/common.js")
+    

@@ -1,0 +1,76 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Прокат' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Прокат' + ' - Спица' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      
+      .breadcrumbs
+        .container
+          ul
+            li
+              a(href="index.html")
+                i.fa.fa-home
+                | Главная
+            li
+              a(href="hire.html") Прокат
+      
+      section.section.directions.no--p-top
+        .container
+          .hidden-xs
+            .clear25
+            
+          .section__head.section__head--yellow
+            .section__head-wrapper
+              div
+                .section__head-icon
+                  div
+                    +imgSvgVelo
+              div
+                h1 Велопрокат
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          
+          .directions__row.directions__row--2column
+            
+            mixin advantagesBlock(title, img, className)
+              div
+                a(href="bicycle-hire.html" class='directions__block ' + className)
+                  .directions__block-lines
+                    div
+                    div
+                    div
+                    div
+                  .directions__block-img
+                    img(src= img, alt="")
+                  .directions__block-title
+                    span= title
+            
+            +advantagesBlock('Велосипеды', './img/direction-img-6.png', 'directions__block--green')
+            +advantagesBlock('Снаряжение', './img/direction-img-7.png', 'directions__block--green')
+      
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

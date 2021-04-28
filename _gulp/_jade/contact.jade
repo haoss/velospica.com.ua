@@ -1,0 +1,158 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Контакты' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Контакты' + ' - Спица' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      
+      .breadcrumbs
+        .container
+          ul
+            li
+              a(href="index.html")
+                i.fa.fa-home
+                | Главная
+          
+      section.section.angle.angle--reverse.no--p-bottom
+        
+        .angle__wrapper.angle__wrapper--map
+          .angle__wrapper-left
+            +svgCorner
+          .angle__wrapper-right
+            #map_canvas
+              // Google Map
+              script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
+              script.
+                function initialize() {
+                var myLatlng = new google.maps.LatLng(50.0560824,36.2668287);
+                var map_options = {
+                zoom: 17,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: myLatlng,
+                scrollwheel: false,
+                disableDefaultUI: true
+                }
+                var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
+                var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map
+                });
+                /* Remove if you dont want B/W Google Map */
+                /*
+                var styles = [
+                {
+                featureType: "all",
+                stylers: [
+                { saturation: -100 }
+                ]
+                }
+                ];
+                map.setOptions({styles: styles});
+                */
+                }
+                google.maps.event.addDomListener(window, 'load', initialize);
+              // Google Map Ends!
+
+        
+        .container
+          .row
+            .col-lg-6.col-md-7.col-sm-9
+          
+              .section__head.section__head--yellow.section__head--left.section__head--479row
+                .section__head-wrapper
+                  div
+                    .section__head-icon
+                      div
+                        +imgSvgVelo
+                  div
+                    h1 Приезжайте к нам в гости
+              
+              .angle__content
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                
+                .contacts
+                  .contacts__contact
+                    .contacts__contact-title Всегда на связи
+                    i.fa.fa-phone
+                    | +38(099) 032 123 23
+                  .contacts__contact
+                    .contacts__contact-title Адрес
+                    i.fa.fa-map-marker
+                    | г. Харьков, Белгородское шоссе 7а
+                  .contacts__contact
+                    .contacts__contact-title Режим работы
+                    i.fa.fa-clock-o
+                    | +38(099) 032 123 23
+                  .contacts__contact
+                    .contacts__contact-title Следите за новостями в соц сетях
+                    .contacts__social
+                      a(href="#!")
+                        i.fa.fa-facebook
+                      a(href="#!")
+                        i.fa.fa-instagram
+                      a(href="#!")
+                        i.fa.fa-twitter
+    
+      section.section.form-section
+        .container
+          
+          .section__head.section__head--green
+            .section__head-wrapper
+              div
+                .section__head-icon
+                  div
+                    +imgSvgVelo
+              div
+                h1 Обратная связь
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            
+          
+          form.form(action="#")
+            .row
+              .col-lg-4.col-lg-offset-2.col-md-5.col-md-offset-1.col-sm-6
+                .form-group.has-icon
+                  input(type="text" name="first-name" placeholder="Ваше имя").form-control
+                  i.fa.fa-user
+                .form-group.has-icon.has-error
+                  input(type="text" name="phone" placeholder="+38 (___) ___ __ __").form-control.phone-mask
+                  i.fa.fa-phone
+                .form-group.has-icon
+                  input(type="text" name="email" placeholder="Введите email").form-control
+                  i.fa.fa-envelope
+              .col-lg-4.col-md-5.col-sm-6
+                .form-group.has-icon
+                  textarea.form-control(name="message" placeholder="Введите комментарий")
+                  i.fa.fa-pencil
+            
+            .clear30
+            .text-center
+              button(type="submit").btn.btn--red
+                span
+                  i.fa.fa-long-arrow-right
+                  | Отправить
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    

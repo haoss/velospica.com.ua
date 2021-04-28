@@ -1,0 +1,952 @@
+/* modules */
+
+.stub
+  &__container
+    max-width: 1170px
+    padding: 0 15px
+    margin: 0 auto
+  &__wrapper
+    width: 100%
+    height: 100vh
+    overflow: hidden
+    position: relative
+    background:
+      image: url('../img/stub-background.jpg')
+      repeat: no-repeat
+      size: cover
+      position: top center
+  &__content
+    width: 590px
+    height: 415px
+    background: rgba($color-white,0.8)
+    margin-top: 40px
+    margin-left: 20px
+    position: absolute
+    font-family: 'akzidenz-grotesk_proLtIt'
+    font-size: rem(18)
+    top: 50%
+    transform: translateY(-50%) skewX(-13deg)
+    color: #444444
+    &-wrapper
+      transform: skewX(13deg)
+      padding: 85px 25px 10px 60px
+      p
+        line-height: 22px
+    &-logo
+      position: absolute
+      margin-top: -170px
+      margin-left: -110px
+    &-title
+      font-family: 'akzidenz-grotesk_proMdCnIt'
+      font-size: 45px
+      color: #29478f
+      line-height: 1
+      text-transform: uppercase
+      margin-bottom: 20px
+    &-social
+      display: flex
+      &>div
+        flex-basis: 250px
+      &_title
+        font-family: 'akzidenz-grotesk_proMdIt'
+        color: #29478f
+        line-height: 1
+        margin-bottom: 10px
+    &-contact
+      font-size: rem(16)
+      font-family: 'akzidenz-grotesk_proMdIt'
+      margin-bottom: 10px
+      .fa
+        margin-right: 5px
+      a
+        text-decoration: none
+        color: #444444
+    &-links
+      font-size: rem(14)
+      white-space: nowrap
+      a
+        display: inline-block
+        text-decoration: none
+        color: #444444
+        vertical-align: middle
+        margin-right: 20px
+    &-text
+      position: absolute
+      margin-top: -240px
+      margin-left: -5px
+
+.advantages
+  padding-bottom: 50px
+  &__row
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -15px
+    &>div
+      padding: 0 15px
+      width: 50%
+  &__block
+    padding-left: 50px
+    margin-bottom: 50px
+    &-wrapper
+      background: $color-white
+      position: relative
+      box-shadow: 0 5px 12px rgba(#b5b5b5,0.5)
+      padding: 10px 15px 10px 196px
+      height: 165px
+      display: table
+      width: 100%
+      font-size: rem(16)
+      &>div
+        display: table-cell
+        vertical-align: middle
+      p
+        line-height: 23px
+        margin: 0
+    &-img
+      position: absolute
+      left: 0
+      top: 0
+      bottom: 0
+      width: 165px
+      background:
+        color: $color-gray
+        size: cover
+        repeat: no-repeat
+        position: top center
+    &-head
+      height: 68px
+      display: flex
+      align-items: center
+      margin-left: -43px
+      margin-bottom: -8px
+      position: relative
+      z-index: 5
+      font-size: rem(20)
+      font-family: $font-roboto-medium
+      &>div
+        line-height: 23px
+        &+div
+          padding-left: 20px
+      &--yellow
+        color: $color-yellow
+        .advantages__block-icon
+          background: $color-yellow
+      &--green
+        color: $color-green
+        .advantages__block-icon
+          background: $color-green
+      &--blue
+        color: $color-blue
+        .advantages__block-icon
+          background: $color-blue
+    &-icon
+      width: 68px
+      height: 68px
+      background: $primary-color
+      color: $color-white
+      transform: skewX(-10deg)
+      overflow: hidden
+      &>div
+        transform: skewX(10deg)
+        height: 87px
+        position: relative
+        z-index: 5
+        overflow: hidden
+        left: 3px
+      span
+        font-family: $font-akz-rc
+        font-size: rem(80)
+        line-height: 1
+        display: block
+        position: absolute
+        right: -6px
+        bottom: -2px
+
+.angle
+  // background: pink
+  position: relative
+  // overflow: hidden
+  min-height: 980px
+  padding-top: 25px
+  margin-top: 94px
+  &__wrapper
+    position: absolute
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    &>div
+      position: absolute
+      top: 0
+      bottom: 0
+      z-index: 0
+    &-left
+      background-color: #fbfafe
+      left: 0
+      width: calc(50% - 98px)
+      z-index: 5 !important
+      top: -94px !important
+      bottom: 94px !important
+      svg
+        position: absolute
+        right: -235px
+        width: 235px
+        top: 0
+        bottom: 0
+        fill: #fbfafe
+    &-right
+      width: calc(50% + 120px)
+      background:
+        // color: green
+        position: center
+        repeat: no-repeat
+        size: cover
+      right: 0
+      overflow: hidden
+      clip-path: polygon(235px 0%, 100% 0, 100% 100%, 0% 100%)
+  &>.container
+    position: relative
+    z-index: 10
+  &__content
+    max-width: 458px
+  &--contacts
+    min-height: 793px
+    .angle__wrapper
+      &-left
+        bottom: 0 !important
+        svg
+          width: 205px
+          right: -205px
+      &-right
+        width: calc(50% + 98px)
+        clip-path: none
+  &__img
+    display: none
+  &--reverse
+    padding-top: 120px
+    min-height: 820px
+    .angle__wrapper
+      &-left
+        top: 0 !important
+        bottom: 0 !important
+        svg
+          right: -189px
+          width: 189px
+      &-right
+        top: -90px !important
+        bottom: 80px
+        width: calc(50% + 80px)
+        clip-path: polygon(193px 0%, 100% 0, 100% 100%, 0% 100%)
+    #map_canvas
+      padding-bottom: 830px
+
+.directions
+  &__row
+    flex-wrap: wrap
+    display: flex
+    margin: 0 -15px
+    &>div
+      width: 33.3%
+      padding: 0 15px
+    &--2column
+      &>div
+        width: 50%
+
+  &__block
+    display: block
+    text-decoration: none
+    position: relative
+    padding-top: 36px
+    max-width: 360px
+    margin: 0 auto
+    &-img
+      width: 292px
+      height: 292px
+      position: relative
+      box-shadow: 0 5px 12px rgba(#29478f,.5)
+      transition: box-shadow 0.35s
+      img
+        position: absolute
+        left: 0
+        bottom: 0
+    &-title
+      transform: skewX(-10deg)
+      position: absolute
+      bottom: -25px
+      right: 3px
+      background: $primary-color
+      color: $color-white
+      font-size: rem(25)
+      font-family: $font-akz-mc
+      text-transform: uppercase
+      // filter: drop-shadow(0 0 0 rgba(#29478f,.5))
+      transition: all 0.35s
+      z-index: 25
+      &>span
+        display: block
+        transform: skewX(10deg)
+        height: 52px
+        line-height: 52px
+        width: 147px
+        text-align: center
+        // filter: none
+    &-lines
+      &>div
+        position: absolute
+        background: rgba($primary-color,.7)
+        height: 88px
+        width: 88px
+        transform: skewX(-11deg)
+        z-index: 10
+        top: 0
+        left: 8px
+        transition: all 0.35s
+        &:first-child
+          transform: translate(0) skewX(-11deg)
+          opacity: 0
+          &+div
+            // transform: translate(58px, 50px) skewX(-15deg)
+            transform: translate(58px, 0px) skewX(-11deg)
+            &+div
+              transform: translate(0, 256px) skewX(-11deg)
+              &+div
+                transform: translate(250px, 90px) skewX(-11deg)
+    &--yellow
+      .directions__block
+        &-title
+          background: $color-yellow
+        &-lines
+          &>div
+            background: rgba($color-yellow,.7)
+    &--green
+      .directions__block
+        &-title
+          background: $color-green
+        &-lines
+          &>div
+            background: rgba($color-green,.7)
+    &--blue
+      .directions__block
+        &-title
+          background: $color-blue
+        &-lines
+          &>div
+            background: rgba($color-blue,.7)
+    &:hover
+      .directions__block
+        &-img
+          box-shadow: 0 0 12px rgba(#3e3b33,.5)
+        &-title
+          background: #d6060d
+        &-lines
+          &>div
+            background: rgba($color-red,.7)
+            &:first-child
+              opacity: 1
+              transform: translate(0) skewX(-11deg)
+              &+div
+                transform: translate(58px, 60px) skewX(-11deg)
+                &+div
+                  transform: translate(148px, 256px) skewX(-11deg)
+                  &+div
+                    transform: translate(250px, 168px) skewX(-11deg)
+
+.contacts
+  &__contact
+    font-family: $font-roboto
+    position: relative
+    padding-left: 20px
+    margin-bottom: 15px
+    &>.fa
+      position: absolute
+      left: 0
+      bottom: 3px
+      line-height: 1
+      color: $color-green
+      font-size: 15px
+    &-title
+      margin-left: -20px
+      margin-bottom: 5px
+      font-family: $font-roboto-medium
+  &__social
+    padding-top: 15px
+    margin-left: -20px
+    &>a
+      display: inline-block
+      height: 40px
+      width: 40px
+      text-align: center
+      border: 1px solid $color-green
+      text-decoration: none
+      color: $color-green
+      font-size: rem(22)
+      position: relative
+      .fa
+        position: absolute
+        left: 50%
+        top: 50%
+        line-height: 1
+        transform: translate(-50%, -50%)
+      &:hover, &:focus
+        border-color: $color-red
+        background: $color-red
+        color: $color-white
+      &+a
+        margin-left: 18px
+
+#map_canvas
+  position: absolute
+  left: 0
+  top: 0
+  right: 0
+  height: 0
+  width: auto
+  padding-bottom: 793px
+  iframe
+    position: absolute
+    top: 0
+    right: 0
+    left: 0
+    bottom: 0
+
+.main-slider
+  overflow: hidden
+  position: relative
+  &__carousel
+    outline: none
+    &:focus
+      outline: none
+  .slick-dots
+    position: absolute
+    left: 0
+    right: 0
+    margin: 0
+    padding: 0
+    text-align: center
+    height: 12px
+    line-height: 1
+    bottom: 41px
+    padding-left: 113px
+    &>li
+      list-style: none
+      margin: 0
+      display: inline-block
+      vertical-align: 0
+      line-height: 1
+      &:first-child
+        margin-left: 160px
+      button
+        background-color: transparent
+        border: 1px solid $color-white
+        border-radius: 50%
+        height: 12px
+        width: 12px
+        font-size: 0
+        padding: 0
+        margin: 0 5px
+        position: relative
+        z-index: 150
+      &.slick-active
+        button
+          background: $color-white
+  &__block
+    height: 830px
+    background:
+      position: top center
+      size: cover
+      repeat: no-repeat
+
+    img
+      max-width: 100%
+      height: auto
+      display: block
+
+.mouse
+  position: absolute
+  left: 0
+  right: 0
+  text-align: center
+  z-index: 100
+  bottom: 15px
+  color: $color-white
+  &>div, &>a
+    text-decoration: none
+    display: inline-block
+    position: relative
+    left: -10px
+    cursor: pointer
+    img
+      animation: sdb05 3.5s infinite
+
+@keyframes sdb05
+  0%
+    transform: rotate(0) translate(0, 0)
+    opacity: 0
+  50%
+    opacity: 1
+  100%
+    transform: rotate(0) translate(0, 10px)
+    opacity: 0
+
+.breadcrumbs
+  min-height: 90px
+  font-size: rem(15)
+  color: $primary-color
+  padding: 35px 0 25px 0
+  overflow: hidden
+  ul
+    margin: 0
+    padding: 0
+    li
+      list-style: none
+      margin: 0 0 10px 0
+      float: left
+      &+li
+        &::before
+          content: '/'
+          display: inline-block
+          margin-left: 5px
+          margin-right: 5px
+      a, span
+        display: inline-block
+        color: $primary-color
+      .fa-home
+        margin-right: 5px
+        display: inline-block
+  &+.angle--reverse
+    margin-top: 0px
+
+.page404
+  &__container
+    max-width: 1170px
+    padding: 0 15px
+    margin: 0 auto
+  &__wrapper
+    width: 100%
+    height: 100vh
+    overflow: hidden
+    position: relative
+    background:
+      image: url('../img/page404-background.jpg')
+      repeat: no-repeat
+      size: cover
+      position: top center
+  &__content
+    width: 590px
+    height: 415px
+    background: rgba($color-white,0.8)
+    margin-top: 40px
+    margin-left: 20px
+    position: absolute
+    font-family: 'akzidenz-grotesk_proLtIt'
+    font-size: rem(18)
+    top: 50%
+    transform: translateY(-50%) skewX(-13deg)
+    color: #444444
+    &-wrapper
+      transform: skewX(13deg)
+      padding: 85px 25px 10px 60px
+      p
+        line-height: 22px
+    &-logo
+      position: absolute
+      margin-top: -170px
+      margin-left: -110px
+    &-title
+      font-family: 'akzidenz-grotesk_proMdCnIt'
+      font-size: 45px
+      color: #29478f
+      line-height: 1
+      text-transform: uppercase
+      margin-bottom: 20px
+    &-social
+      display: flex
+      &>div
+        flex-basis: 250px
+      &_title
+        font-family: 'akzidenz-grotesk_proMdIt'
+        color: #29478f
+        line-height: 1
+        margin-bottom: 10px
+    &-contact
+      font-size: rem(16)
+      font-family: 'akzidenz-grotesk_proMdIt'
+      margin-bottom: 10px
+      .fa
+        margin-right: 5px
+      a
+        text-decoration: none
+        color: #444444
+    &-links
+      font-size: rem(14)
+      white-space: nowrap
+      a
+        display: inline-block
+        text-decoration: none
+        color: #444444
+        vertical-align: middle
+        margin-right: 20px
+    &-text
+      position: absolute
+      margin-top: -240px
+      margin-left: -5px
+
+.menu-pdf
+  padding-top: 170px
+  &__wrapper
+    background:
+      color: #ccc
+      position: top center
+      repeat: no-repeat
+      size: cover
+      image: url('../img/gradient-background.jpg')
+    &-body
+      &>div
+        height: 230px
+      .btn
+        margin: 90px 0
+  &__img
+    position: absolute
+    left: 15px
+    bottom: 0
+
+.dish-of-day
+  padding-bottom: 0px
+  &__row
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -15px
+    &>div
+      width: 50%
+      padding: 0 15px
+  &__block
+    text-decoration: none
+    color: $primary-color
+    margin: 0 auto 50px
+    display: block
+    max-width: 555px
+    &-img
+      overflow: hidden
+      margin-bottom: 5px
+      img
+        max-width: 100%
+        height: auto
+        display: block
+        transform: scale(1)
+        transition: transform 0.35s
+    &-title
+      span
+        display: block
+        font-family: $font-akz-mc
+        font-size: rem(25)
+        text-transform: uppercase
+        margin-bottom: 5px
+      small
+        display: block
+        line-height: 1
+        color: #666666
+        font-family: $font-opensans-i
+    &:hover
+      .dish-of-day__block-img
+        img
+          transform: scale(1.2)
+
+.gallery
+  &__row
+    +clearfix
+  &__block
+    position: relative
+    float: left
+    overflow: hidden
+    width: 25%
+    &>a
+      display: block
+      &::after
+        content: ''
+        background: $color-yellow
+        opacity: 0
+        transition: opacity 0.35s
+        position: absolute
+        top: 0
+        right: 0
+        bottom: 0
+        left: 0
+        z-index: 10
+    img
+      max-width: 100%
+      height: auto
+      display: block
+    &:hover
+      &>a
+        &::after
+          opacity: 0.5
+        &::before
+          opacity: 1
+  &-item
+    &::before
+      opacity: 0
+      transition: opacity 0.35s
+      content: "\f00e"
+      font-family: $font-awesome
+      width: 50px
+      height: 50px
+      background: rgba($color-white,.55)
+      color: $color-yellow
+      display: block
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+      font-size: rem(25)
+      text-align: center
+      line-height: 50px
+      z-index: 15
+  &--list
+    .gallery__block
+      width: 100%
+      margin-bottom: 30px
+    .pagination
+      padding-top: 50px
+
+.news
+  &__row
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -15px
+    &>div
+      width: 50%
+      padding: 0 15px
+  &__block
+    text-decoration: none
+    color: $primary-color
+    margin: 0 auto 50px
+    display: block
+    max-width: 555px
+    &-img
+      overflow: hidden
+      margin-bottom: 10px
+      img
+        max-width: 100%
+        height: auto
+        display: block
+        transform: scale(1)
+        transition: transform 0.35s
+    &-title
+      span
+        display: block
+        font-family: $font-akz-mc
+        font-size: rem(25)
+        text-transform: uppercase
+        margin-bottom: 5px
+        line-height: 1.2
+      small
+        display: block
+        line-height: 1
+        color: #666666
+        font-family: $font-opensans-i
+    p
+      font-size: rem(14)
+      color: #666666
+    &:hover
+      .news__block-img
+        img
+          transform: scale(1.2)
+  &__more
+    color: $color-green
+    text-transform: uppercase
+    font-family: $font-roboto-bold
+    text-decoration: none
+    .fa
+      font-size: rem(20)
+      margin-right: 10px
+      display: inline-block
+      line-height: 1
+      vertical-align: -1px
+    &:hover
+      color: $color-yellow
+
+.catalog
+  &__row
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -15px
+    &>div
+      width: 50%
+      padding: 0 15px
+    &--3column
+      &>div
+        width: 33.3%
+      .catalog__block
+        max-width: 360px
+  &__block
+    text-decoration: none
+    color: $primary-color
+    margin: 0 auto 50px
+    display: block
+    max-width: 555px
+    &-img
+      overflow: hidden
+      margin-bottom: 10px
+      img
+        max-width: 100%
+        height: auto
+        display: block
+        transform: scale(1)
+        transition: transform 0.35s
+    &-title
+      span
+        display: block
+        font-family: $font-akz-mc
+        font-size: rem(25)
+        text-transform: uppercase
+        margin-bottom: 5px
+        line-height: 1.2
+      small
+        display: block
+        line-height: 1
+        color: #666666
+        font-family: $font-opensans-i
+    p
+      font-size: rem(14)
+      color: #666666
+    &:hover
+      .news__block-img
+        img
+          transform: scale(1.2)
+  &__more
+    color: $color-green
+    text-transform: uppercase
+    font-family: $font-roboto-bold
+    text-decoration: none
+    .fa
+      font-size: rem(20)
+      margin-right: 10px
+      display: inline-block
+      line-height: 1
+      vertical-align: -1px
+    &:hover
+      color: $color-yellow
+
+.rental-conditions
+  padding: 0 !important
+  text-align: right
+  background:
+    color: #1a1a1a
+    position: top center
+    repeat: no-repeat
+    image: url('../img/rental-conditions-background.jpg')
+  height: 300px
+  .btn
+    margin-top: 160px
+    margin-right: 142px
+
+.properties
+  &__content
+    &-head
+      text-transform: uppercase
+      font-size: rem(25)
+      font-family: $font-akz-mc
+      text-align: center
+      margin-bottom: 10px
+    &-table
+      width: 100%
+      font-size: rem(16)
+      font-family: $font-opensans-r
+      margin-bottom: 25px
+      min-width: 767px
+      &>thead
+        &>tr
+          &>th
+            font-weight: 400
+            font-style: italic
+            background: #d5e8dd
+            color: #666666
+            padding: 7px 10px
+      &>tbody
+        &>tr
+          &>td
+            border-bottom: 1px solid #d5e8dd
+            padding: 10px 15px
+
+.table-responsive
+  min-height: .01%
+  overflow-x: auto
+
+.how-to-use
+  &__row
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -15px
+    &>div
+      padding: 0 15px
+      width: 25%
+  &__block
+    font-size: rem(15)
+    text-align: center
+    max-width: 263px
+    margin: 0 auto 25px
+    p
+      margin-bottom: 0
+      line-height: 24px
+    &-title
+      text-transform: uppercase
+      font-size: rem(24)
+      font-family: $font-akz-mc
+    &-img
+      margin-bottom: 10px
+
+.pagination
+  text-align: center
+  ul
+    margin: 0
+    padding: 0
+    display: inline-block
+    li
+      list-style: none
+      margin: 0
+      float: left
+      &+li
+        margin-left: 10px
+      &>a,&>span
+        display: block
+        width: 35px
+        height: 35px
+        // line-height: 32px
+        // border: 2px solid #eaf3ee
+        background: #fff
+        text-decoration: none
+        background: #eaf3ee
+        color: #2f8d57
+        font-size: rem(40)
+        font-family: $font-akz-mc
+        position: relative
+        overflow: hidden
+        &>span
+          position: absolute
+          right: -2px
+          top: 9px
+          display: block
+          line-height: 1
+      &>a
+        &:hover, &:focus
+          color: $color-white
+          border-color: #2f8d57
+          background: #2f8d57
+      &.active
+        border: 0
+        &>a,&>span
+          background: #2f8d57
+          color: $color-white
+          border-color: #2f8d57
+      &.pagination
+        &__left, &__right
+          &>a, &>span
+            border: 2px solid #eaf3ee
+            background: $color-white
+            font-size: rem(16)
+            line-height: 32px
+          &>a
+            &:hover, &:focus
+              color: $color-white
+              border-color: #2f8d57
+              background: #2f8d57

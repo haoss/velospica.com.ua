@@ -1,0 +1,183 @@
+/* header */
+.header
+  background: $color-white
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  z-index: 1000
+  box-shadow: 0 8px 12px rgba(#b5b5b5,.4)
+  height: 155px
+  &__top
+    height: 50px
+    padding: 9px 0
+    background: #f4f2fb
+    font-size: rem(14)
+    &-wrapper
+      display: flex
+      justify-content: space-around
+      align-items: center
+  &__bottom
+    height: 105px
+    // overflow: hidden
+    // opacity: 0
+    // visibility: hidden
+  &-separator
+    height: 155px
+  &__contact
+    padding-left: 22px
+    position: relative
+    line-height: 1
+    .fa
+      position: absolute
+      left: 0
+      top: -1px
+      font-size: rem(15)
+      // color: $color-green
+  &__social
+    margin-left: -5px
+    a
+      display: inline-block
+      margin: 5px
+      color: $primary-color
+      &:hover, &:focus
+        color: $color-green
+      &+a
+        margin-left: 20px
+  &__button
+    display: none
+    height: 35px
+    width: 35px
+    border: 1px solid $color-green
+    background: none
+    color: $color-green
+    margin-top: 23px
+    text-align: center
+    span
+      width: 14px
+      position: relative
+      height: 2px
+      background: $color-green
+      display: inline-block
+      vertical-align: 5px
+      &::before, &::after
+        content: ''
+        position: absolute
+        width: 14px
+        height: 2px
+        left: 0
+        top: 0
+        background: $color-green
+      &::before
+        margin-top: -5px
+      &::after
+        margin-top: 5px
+    &.is-active
+      background: $color-green
+      color: $color-white
+      span
+        background-color: transparent
+        vertical-align: 4px
+        &::before
+          transform-origin: 0 0
+          transform: rotate(40deg)
+          left: 2px
+          background-color: $color-white
+        &::after
+          transform-origin: 0 100%
+          transform: rotate(-48deg)
+          left: 3px
+          background-color: $color-white
+          margin-top: 4px
+  &__logo
+    float: left
+    padding-top: 30px
+    img
+      max-width: 202px
+      height: auto
+      display: block
+      margin: 0 auto
+  &__nav
+    float: right
+    padding-top: 33px
+    &-ul
+      margin: 0
+      padding: 0
+      +clearfix
+    &-ulul
+      margin: 0
+      padding: 0
+      visibility: hidden
+      opacity: 0
+      position: absolute
+      width: 170px
+      left: 0
+      top: 35px
+      background: $color-white
+      box-shadow: 0 5px 12px rgba(#b5b5b5,.5)
+      transform: translateY(20px)
+      transition: all 0.35s
+      +clearfix
+    &-li
+      list-style: none
+      margin: 0
+      float: left
+      position: relative
+      border-bottom: 8px solid transparent
+      &+li
+        margin-left: -1px
+      &:last-child
+        .header__nav-a
+          border-right-color: $color-green
+      &.active
+        .header__nav-a
+          background-color: $color-green
+          color: $color-white
+      &:hover
+        .header__nav-ulul
+          transform: translateY(10px)
+          opacity: 1
+          visibility: visible
+        .header__nav-a
+          background-color: $color-green
+          color: $color-white
+    &-lili
+      list-style: none
+      margin: 0
+      &.active
+        .header__nav-aa
+          background: $color-green
+          color: $color-white
+    &-a
+      display: inline-block
+      text-decoration: none
+      font-size: rem(16)
+      text-transform: uppercase
+      font-family: $font-roboto-bold
+      height: 37px
+      line-height: 35px
+      padding: 0 24px
+      transform: skewX(-10deg)
+      border: 1px solid transparent
+      border-left-color: $color-green
+      &>span
+        display: inline-block
+        transform: skewX(10deg)
+        .fa
+          margin-left: 5px
+          display: inline-block
+          vertical-align: 1px
+    &-aa
+      display: block
+      height: 40px
+      line-height: 40px
+      font-size: rem(16)
+      text-transform: uppercase
+      font-family: $font-roboto-bold
+      text-decoration: none
+      padding: 0 10px 0 20px
+      &:hover
+        background: $color-green
+        color: $color-white
+    &-ulul
+      padding: 10px 0

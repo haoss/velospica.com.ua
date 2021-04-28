@@ -1,0 +1,708 @@
+/*==========  Desktop First Method  ==========*/
+
+/* 1920 */
+@media only screen and (min-width : 1999px)
+  /**/
+
+@media only screen and (max-width : 1599px)
+  /**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1439px)
+  /**/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px)
+  .stub
+    &__container
+      padding-left: 45px
+  .page404
+    &__container
+      padding-left: 45px
+  .advantages
+    &__block
+      padding-left: 0
+      &-head
+        margin-left: 5px
+  .directions
+    &__block
+      padding-top: 25px
+      max-width: 293px
+      &-img
+        width: 242px
+        height: 242px
+        img
+          max-width: 298px
+          max-height: 298px
+      &-lines
+        &>div
+          width: 70px
+          height: 70px
+          &:first-child
+            transform: translate(0) skewX(-11deg)
+            &+div
+              transform: translate(48px, 0px) skewX(-11deg)
+              &+div
+                transform: translate(0, 210px) skewX(-11deg)
+                &+div
+                  transform: translate(190px, 90px) skewX(-11deg)
+      &:hover
+        .directions__block
+          &-lines
+            &>div
+              &:first-child
+                transform: translate(0) skewX(-11deg)
+                &+div
+                  transform: translate(48px, 60px) skewX(-11deg)
+                  &+div
+                    transform: translate(110px, 210px) skewX(-11deg)
+                    &+div
+                      transform: translate(190px, 142px) skewX(-11deg)
+  .angle
+    padding-top: 45px
+    margin-top: 45px
+    min-height: 650px
+    &__wrapper
+      &-left
+        top: -45px !important
+        bottom: 45px !important
+        width: 50%
+        svg
+          width: 165px
+          right: -165px
+      &-right
+        width: calc(50% + 10px)
+        clip-path: polygon(165px 0%, 100% 0, 100% 100%, 0% 100%)
+    &--reverse
+      padding-top: 84px
+      min-height: 710px
+      #map_canvas
+        padding-bottom: 750px
+      .angle__wrapper
+        &-left
+          svg
+            right: -137px
+            width: 137px
+  .header
+    &__top
+      &-wrapper
+        justify-content: space-between
+    &__nav
+      &-a
+        padding: 0 15px
+  .main-slider
+    &__block
+      height: 645px
+    .slick-dots
+      bottom: 25px
+  .menu-pdf
+    padding-top: 140px
+  .gallery
+    &__block
+      width: 33.3%
+    &__row
+      .gallery__block
+        &:last-child
+          display: none
+    &--list
+      .gallery__block
+        display: block !important
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px)
+  .advantages
+    &__row
+      flex-direction: column
+      &>div
+        width: 100%
+    &__block
+      padding-left: 63px
+      margin-bottom: 30px
+      &-head
+        margin-left: -57px
+  .section
+    padding: 50px 0
+    &__head
+      &-icon
+        &::before
+          left: -20px
+  .directions
+    &__block
+      padding-top: 20px
+      max-width: 220px
+      &-img
+        width: 180px
+        height: 180px
+        img
+          max-width: 222px
+          max-height: 222px
+      &-lines
+        &>div
+          width: 55px
+          height: 55px
+          &:first-child
+            transform: translate(0) skewX(-11deg)
+            &+div
+              transform: translate(38px, 0px) skewX(-11deg)
+              &+div
+                transform: translate(0, 155px) skewX(-11deg)
+                &+div
+                  transform: translate(140px, 70px) skewX(-11deg)
+      &:hover
+        .directions__block
+          &-lines
+            &>div
+              &:first-child
+                transform: translate(0) skewX(-11deg)
+                &+div
+                  transform: translate(38px, 47px) skewX(-11deg)
+                  &+div
+                    transform: translate(30px, 155px) skewX(-11deg)
+                    &+div
+                      transform: translate(140px, 102px) skewX(-11deg)
+  .angle
+    padding-top: 24px
+    margin-top: 75px
+    min-height: 760px
+    &__content
+      max-width: 345px
+    &--reverse
+      padding-top: 74px
+      min-height: 730px
+      &+.section
+        padding-top: 90px
+  .header
+    height: 80px
+    &-separator
+      height: 80px
+    &__bottom
+      height: 80px
+      &>.container
+        position: relative
+    &__top
+      background: none
+      height: 0
+      padding: 0
+      &>.container
+        position: relative
+      &-wrapper
+        position: absolute
+        right: 0
+        width: 345px
+        top: 35px
+        z-index: 10
+    &__button
+      position: absolute
+      display: block
+    &__logo
+      padding-top: 16px
+      margin-left: 125px
+      img
+        width: 197px
+    &__nav
+      display: block
+      opacity: 0
+      visibility: hidden
+      width: 320px
+      border-top: 1px solid $color-green
+      position: absolute
+      float: none
+      left: 15px
+      margin-top: 80px
+      top: 0
+      background: $color-white
+      padding: 10px 0
+      box-shadow: 0 8px 12px rgba(#b5b5b5,.4)
+      transition: opacity 0.35s, visibility 0.35s
+      +clearfix
+      &.is-active
+        opacity: 1
+        visibility: visible
+      &-ul
+        float: none
+      &-li
+        border: 0
+        float: none
+      &-a
+        border: 0
+        height: 45px
+        line-height: 44px
+        transform: none
+        display: block
+        &>span
+          transform: none
+      &-ulul
+        display: none !important
+  .main-slider
+    &__block
+      height: 550px
+  .menu-pdf
+    &__wrapper
+      &-body
+        overflow: hidden
+        &>div
+          height: auto
+        .btn
+          margin-top: 50px
+          margin-bottom: 300px
+    &__img
+      bottom: -31px
+  .rental-conditions
+    .btn
+      margin-right: 25px
+  .how-to-use
+    &__row
+      &>div
+        width: 50%
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px)
+
+  .animated
+    transition-property: none !important
+    transform: none !important
+    animation: none !important
+  .stub
+    &__container
+      padding-left: 0px
+    &__content
+      width: 315px
+      height: 275px
+      font-size: rem(15)
+      &-wrapper
+        padding-top: 20px
+        padding-left: 50px
+        padding-top: 10px
+        p
+          line-height: 18px
+          margin-bottom: 15px
+      &-logo
+        width: 183px
+        height: auto
+        margin-top: -70px
+        margin-left: -20px
+      &-title
+        font-size: rem(22)
+        margin-bottom: 10px
+      &-social
+        display: block
+        &>div
+          &+div
+            padding-top: 10px
+        &_title
+          margin-bottom: 5px
+      &-contact
+        margin-bottom: 0
+      &-text
+        margin-top: -120px
+        width: 270px
+  .page404
+    &__container
+      padding-left: 0px
+    &__content
+      width: 315px
+      height: 275px
+      font-size: rem(15)
+      &-wrapper
+        padding-top: 20px
+        padding-left: 50px
+        padding-top: 10px
+        p
+          line-height: 18px
+          margin-bottom: 15px
+      &-logo
+        width: 183px
+        height: auto
+        margin-top: -70px
+        margin-left: -20px
+      &-title
+        font-size: rem(22)
+        margin-bottom: 10px
+      &-social
+        display: block
+        &>div
+          &+div
+            padding-top: 10px
+        &_title
+          margin-bottom: 5px
+      &-contact
+        margin-bottom: 0
+      &-text
+        margin-top: -120px
+        width: 270px
+  .h1, h1
+    font-size: rem(30)
+  .section
+    padding: 40px 0
+    &__head
+      margin-bottom: 30px
+      &-wrapper
+        margin-bottom: 10px
+        &>div
+          &+div
+            padding-left: 20px
+      &-icon
+        height: 70px
+        width: 70px
+        &::before
+          height: 70px
+          width: 70px
+          top: -15px
+          left: -15px
+        &>div
+          height: 70px
+          img
+            &[src*='icon-velo.svg']
+              width: 98px
+              height: 60px
+              top: 22px
+              left: 18px
+      &--left
+        text-align: center
+        .section__head-wrapper
+          margin-left: 0
+  .advantages
+    &__block
+      padding-left: 0px
+      &-head
+        margin-left: 5px
+  .footer
+    &__logo
+      margin-bottom: 15px
+    &__title
+      margin-top: 0
+    &__list
+      max-width: 250px
+      margin-bottom: 20px
+  .directions
+    &__row
+      display: block
+      &>div
+        width: 100%
+        &:last-child
+          .directions__block
+            margin-bottom: 0
+    &__block
+      margin-bottom: 70px
+      padding-top: 36px
+      max-width: 360px
+      &-img
+        width: 292px
+        height: 292px
+        img
+          max-width: inherit
+          max-height: inherit
+      &-lines
+        &>div
+          height: 88px
+          width: 88px
+          &:first-child
+            transform: translate(0) skewX(-11deg)
+            opacity: 0
+            &+div
+              // transform: translate(58px, 50px) skewX(-15deg)
+              transform: translate(58px, 0px) skewX(-11deg)
+              &+div
+                transform: translate(0, 256px) skewX(-11deg)
+                &+div
+                  transform: translate(250px, 90px) skewX(-11deg)
+      &:hover
+        .directions__block
+          &-lines
+            &>div
+              &:first-child
+                opacity: 1
+                transform: translate(0) skewX(-11deg)
+                &+div
+                  transform: translate(58px, 60px) skewX(-11deg)
+                  &+div
+                    transform: translate(148px, 256px) skewX(-11deg)
+                    &+div
+                      transform: translate(250px, 168px) skewX(-11deg)
+  .angle
+    min-height: inherit
+    margin-top: 0
+    &__wrapper
+      display: none
+      &--map
+        display: block
+        position: inherit
+        margin-bottom: 45px
+        .angle__wrapper
+          &-left
+            display: none
+          &-right
+            float: none
+            width: 100%
+            position: inherit
+    &__content
+      max-width: inherit
+    &__img
+      margin: 0 -15px 35px -15px
+      display: block
+    &--contacts
+      padding-top: 0
+    &--reverse
+      padding-top: 0
+      .angle__wrapper-right
+        clip-path: none
+        top: 0 !important
+      #map_canvas
+        padding-bottom: 310px
+  #map_canvas
+    position: relative
+    padding-bottom: 310px
+  .header
+    &__top
+      display: none
+    &__logo
+      margin-left: 0
+      text-align: center
+      float: none
+      &>a
+        display: inline-block
+  .main-slider
+    .slick-dots
+      padding-left: 0
+      bottom: 18px
+      &>li
+        &:first-child
+          margin-left: 50px
+    &__block
+      height: 310px
+    .mouse
+      display: none
+  .breadcrumbs
+    min-height: inherit
+    padding-top: 25px
+    padding-bottom: 25px
+  .dish-of-day
+    &__row
+      &>div
+        flex-direction: column
+        width: 100%
+        &:last-child
+          .dish-of-day__block
+            margin-bottom: 0
+  .menu-pdf
+    padding-top: 40px !important
+    &__wrapper
+      &-body
+        .btn
+          margin-bottom: 50px
+  .gallery
+    &__block
+      width: 50%
+    &__row
+      .gallery__block:last-child
+        display: block
+  .news
+    &__row
+      &>div
+        flex-direction: column
+        width: 100%
+        &:last-child
+          .dish-of-day__block
+            margin-bottom: 0
+  .catalog
+    &__row
+      &>div
+        flex-direction: column
+        width: 100%
+        &:last-child
+          .dish-of-day__block
+            margin-bottom: 0
+      &--3column
+        &>div
+          width: 100%
+  .table-responsive
+    width: 100%
+    margin-bottom: 15px
+    overflow-y: hidden
+    // border: 1px solid #ddd
+  .how-to-use
+    &__row
+      &>div
+        width: 100%
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 479px)
+  .stub
+    &__content
+      margin-left: -10px
+  .page404
+    &__content
+      margin-left: -10px
+  .h1, h1
+    font-size: rem(25)
+  .advantages
+    &__block
+      &-wrapper
+        padding: 0
+        display: block
+        height: auto
+        font-size: rem(15)
+        &>div
+          display: block
+        p
+          padding: 10px 20px
+      &-img
+        position: relative
+        height: 291px
+        width: 100%
+      &-head
+        margin-bottom: 10px
+        align-items: flex-start
+        height: auto
+        font-size: rem(18)
+        &>div
+          line-height: 20px
+          &+div
+            padding-top: 7px
+      &-icon
+        height: 52px
+        width: 52px
+        span
+          font-size: rem(60)
+          bottom: -15px
+          right: -2px
+        &>div
+          height: 52px
+  .section
+    &__head
+      margin-bottom: 25px
+      &-icon
+        height: 50px
+        width: 50px
+        &::before
+          height: 50px
+          width: 50px
+          top: -10px
+          left: -10px
+        &>div
+          height: 50px
+          img
+            &[src*='icon-velo.svg']
+              width: 73px
+              height: 44px
+              top: 14px
+              left: 11px
+      &--479row
+        .section__head
+          &-wrapper
+            display: block
+            &>div
+              &+div
+                padding-left: 0
+          &-icon
+            margin: 0 auto 10px
+  .directions
+    &__block
+      padding-top: 25px
+      max-width: 290px
+      margin-bottom: 55px
+      &-img
+        width: 242px
+        height: 242px
+        img
+          max-width: 298px
+          max-height: 298px
+      &-lines
+        &>div
+          width: 70px
+          height: 70px
+          &:first-child
+            transform: translate(0) skewX(-11deg)
+            &+div
+              transform: translate(48px, 0px) skewX(-11deg)
+              &+div
+                transform: translate(0, 210px) skewX(-11deg)
+                &+div
+                  transform: translate(190px, 90px) skewX(-11deg)
+      &:hover
+        .directions__block
+          &-lines
+            &>div
+              &:first-child
+                transform: translate(0) skewX(-11deg)
+                &+div
+                  transform: translate(48px, 60px) skewX(-11deg)
+                  &+div
+                    transform: translate(110px, 210px) skewX(-11deg)
+                    &+div
+                      transform: translate(190px, 142px) skewX(-11deg)
+  .footer
+    &__bottom
+      text-align: center
+      padding: 10px 0
+      &>.container
+        &>div
+          height: 35px
+          line-height: 35px
+    &__copyright, &__development
+      float: none
+  .header
+    &__logo
+      text-align: right
+    &__nav
+      left: 0
+      width: 100%
+  .main-slider
+    .slick-dots
+      bottom: 14px
+    &__block
+      height: 220px
+  .gallery
+    &__block
+      width: 100%
+    &--list
+      .pagination
+        padding-top: 25px
+      .gallery__row
+        &>div
+          width: 100%
+  .rental-conditions
+    text-align: center
+    .btn
+      margin-right: 0px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 319px)
+  /**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+  /**/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+  /**/
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+  .container
+    width: 750px
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+  .container
+    width: 970px
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+  .container
+    width: 1170px
+
+/* 1440 */
+@media only screen and (min-width : 1440px)
+  /**/
+
+@media only screen and (max-width : 1600px)
+  /**/
+
+/* 1920 */
+@media only screen and (min-width : 1920px)
+  /**/

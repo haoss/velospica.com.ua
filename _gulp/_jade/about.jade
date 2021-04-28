@@ -1,0 +1,160 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'О Велодоме' //активный пункт меню, список в header.jade
+  -var pageTitle = 'О Велодоме' + ' - Спица' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      
+      .breadcrumbs
+        .container
+          ul
+            li
+              a(href="index.html")
+                i.fa.fa-home
+                | Главная
+          
+      section.section.angle.angle--reverse.no--p-bottom
+        
+        +angleWrapper
+        
+        .container
+          .row
+            .col-lg-6.col-md-7.col-sm-8
+              
+              .angle__img
+                img(src="./img/about-img-1.jpg", alt="").img-responsive
+          
+              .section__head.section__head--yellow.section__head--left.section__head--thin
+                .section__head-wrapper
+                  div
+                    .section__head-icon
+                      div
+                        +imgSvgVelo
+                  div
+                    h1 О велодоме
+              
+              .angle__content
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                .clear15
+                a(href="#!").btn.btn--red
+                  i.fa.fa-long-arrow-right
+                  | Связаться с нами
+    
+      section.section.news.no--p-bottom
+        .container
+          
+          .section__head.section__head--green
+            .section__head-wrapper
+              div
+                .section__head-icon
+                  div
+                    +imgSvgVelo
+              div
+                h1 Новости
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        
+          .news__row
+            mixin newsBlock(title, img, text)
+              div
+                div.news__block
+                  .news__block-img
+                    a(href="#!")
+                      img(src= img, alt="")
+                  .news__block-title
+                    span= title
+                  p= text
+                  a(href="#!").news__more
+                    i.fa.fa-long-arrow-right
+                    | Подробнее
+            
+            +newsBlock('От шоссейника до круизера', './img/news-img-1.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip')
+            +newsBlock('От шоссейника до круизера От шоссейника до круизера От шоссейника до круизера', './img/news-img-2.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip')
+            
+      section#angle3.section.angle.no--p-bottom
+        
+        +angleWrapper
+        
+        .container
+          .row
+            .col-lg-6.col-md-7.col-sm-8
+              
+              .angle__img
+                img(src="./img/about-img-1.jpg", alt="").img-responsive
+          
+              .section__head.section__head--yellow.section__head--left.section__head--thin
+                .section__head-wrapper
+                  div
+                    .section__head-icon
+                      div
+                        +imgSvgVelo
+                  div
+                    h1 Социальные программы
+              
+              .angle__content
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                .clear15
+                a(href="#!").btn.btn--red
+                  i.fa.fa-long-arrow-right
+                  | Связаться с нами
+    
+      section.section.gallery.no--p-bottom
+        .container
+          
+          .section__head.section__head--yellow
+            .section__head-wrapper
+              div
+                .section__head-icon
+                  div
+                    +imgSvgVelo
+              div
+                h1 Фотогалерея
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        
+        .gallery__row
+          
+          - for (var i = 0; i < 4; i++) {
+          .gallery__block
+            a(href="./img/gallery-folder-img-1.jpg").gallery-item
+              img(src="./img/gallery-folder-img-1.jpg", alt="")
+          - }
+      
+      section.section.text-center
+        .container
+          
+          a(href="#!").btn.btn--blue
+            i.fa.fa-long-arrow-right
+            | Смотреть еще
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
+    script().
+      (function(){
+        $('.header__nav-ul li.header__nav-li:nth-child(1)').addClass('active');
+        $('#angle3 .angle__wrapper-right').attr('style', 'background-image: url(\'./img/about-img-3.jpg\')');
+        $('#angle3 .angle__img img').attr('src', './img/about-img-3.jpg');
+      })();

@@ -1,0 +1,88 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Галерея' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Галерея' + ' - Спица' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      
+      .breadcrumbs
+        .container
+          ul
+            li
+              a(href="index.html")
+                i.fa.fa-home
+                | Главная
+            li
+              a(href="about.html") О Велодоме
+    
+      section.section.gallery.gallery--list
+        .container
+          
+          .section__head.section__head--green
+            .section__head-wrapper
+              div
+                .section__head-icon
+                  div
+                    +imgSvgVelo
+              div
+                h1 Фотогалерея
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            
+          .gallery__row.row
+            
+            - for (var i = 0; i < 6; i++) {
+            .col-xs-6
+              .gallery__block
+                a(href="./img/gallery-folder-img-1.jpg").gallery-item
+                  img(src="./img/gallery-folder-img-1.jpg", alt="")
+            - }
+          
+          .pagination
+            ul
+              li.pagination__left
+                a(href="#!")
+                  i.fa.fa-long-arrow-left
+              li.active
+                a(href="#!")
+                  span 01
+              li
+                a(href="#!")
+                  span 02
+              li
+                a(href="#!")
+                  span 03
+              li.pagination__right
+                a(href="#!")
+                  i.fa.fa-long-arrow-right
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
+    script().
+      (function(){
+        $('.header__nav-ul li.header__nav-li:nth-child(1)').addClass('active');
+        $('#angle3 .angle__wrapper-right').attr('style', 'background-image: url(\'./img/about-img-3.jpg\')');
+        $('#angle3 .angle__img img').attr('src', './img/about-img-3.jpg');
+      })();

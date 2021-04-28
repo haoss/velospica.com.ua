@@ -1,0 +1,75 @@
+/* footer */
+.footer
+  background-color: #f4f2fb
+  &__top
+    padding-top: 35px
+    padding-bottom: 30px
+    font-family: $font-roboto
+  &__bottom
+    background: #e0e8ea
+    font-size: rem(15)
+    color: #1d1d1d
+    &>.container
+      &>div
+        height: 60px
+        line-height: 60px
+  &__copyright
+    float: left
+  &__development
+    float: right
+    a
+      color: $primary-color
+      text-decoration: none
+      &:hover
+        text-decoration: underline
+  &__title
+    text-transform: uppercase
+    color: $color-green
+    border-bottom: 1px solid $color-green
+    font-size: rem(15)
+    margin-bottom: 10px
+    font-family: $font-roboto-medium
+    padding-bottom: 3px
+    margin-top: -5px
+  &__list
+    margin: 0
+    padding: 0
+    column-count: 2
+    &>li
+      margin: 0 0 10px 0
+      list-style: none
+      &>a
+        color: $primary-color
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+  &__logo
+    font-family: $font-roboto-light
+    font-style: italic
+    img
+      max-width: 165px
+      display: block
+      margin-bottom: 10px
+    span
+      font-size: rem(14)
+      display: block
+      line-height: 20px
+      max-width: 345px
+      line-height: 20px
+  &__contact
+    padding-left: 22px
+    position: relative
+    margin-bottom: 10px
+    .fa
+      position: absolute
+      left: 0
+      top: 4px
+      font-size: rem(15)
+      color: $color-green
+  &__social
+    margin-left: -5px
+    a
+      display: inline-block
+      margin: 5px
+      &+a
+        margin-left: 20px

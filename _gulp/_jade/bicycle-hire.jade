@@ -1,0 +1,158 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Прокат - велопрокат' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Прокат - велопрокат' + ' - Спица' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      
+      .breadcrumbs
+        .container
+          ul
+            li
+              a(href="index.html")
+                i.fa.fa-home
+                | Главная
+      
+      section.section.angle.angle--reverse.no--p-bottom
+        
+        +angleWrapper
+        
+        .container
+          .row
+            .col-lg-6.col-md-7.col-sm-8
+              
+              .angle__img
+                img(src="./img/about-img-1.jpg", alt="").img-responsive
+          
+              .section__head.section__head--yellow.section__head--left.section__head--thin
+                .section__head-wrapper
+                  div
+                    .section__head-icon
+                      div
+                        +imgSvgVelo
+                  div
+                    h1 О велодоме
+              
+              .angle__content
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+    
+      section.section.catalog
+        .container
+          
+          .section__head.section__head--green
+            .section__head-wrapper
+              div
+                .section__head-icon
+                  div
+                    +imgSvgVelo
+              div
+                h1 Велопрокат
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      
+          .catalog__row
+            mixin catalogBlock(title, img)
+              div
+                div.catalog__block
+                  .catalog__block-img
+                    a(href="#!")
+                      img(src= img, alt="")
+                  .catalog__block-title
+                    span= title
+                  p Диаметр колеса: 19''
+                    br
+                    | Тип: Горный
+                    br
+                    | Рама: PRIDE алюминий 6061Т, 26''
+                    br
+                    | Время/Цена: 1 час / 70 грн
+            
+            +catalogBlock('Haibike Seet Race', './img/catalog-img-1.jpg')
+            +catalogBlock('Cannondale Slate Force', './img/catalog-img-2.jpg')
+            +catalogBlock('Haibike Seet Race', './img/catalog-img-1.jpg')
+            +catalogBlock('Cannondale Slate Force', './img/catalog-img-2.jpg')
+            +catalogBlock('Haibike Seet Race', './img/catalog-img-1.jpg')
+            +catalogBlock('Cannondale Slate Force', './img/catalog-img-2.jpg')
+        
+          .text-center
+            .clear25
+            a(href="#!").btn.btn--green
+              i.fa.fa-long-arrow-right
+              | Смотреть еще
+                  
+      section.section.catalog
+        .container
+          
+          .section__head.section__head--yellow
+            .section__head-wrapper
+              div
+                .section__head-icon
+                  div
+                    +imgSvgVelo
+              div
+                h1 Другое оборудование
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      
+          .catalog__row.catalog__row--3column
+            mixin catalogBlock(title, img)
+              div
+                div.catalog__block
+                  .catalog__block-img
+                    a(href="#!")
+                      img(src= img, alt="")
+                  .catalog__block-title
+                    span= title
+                  p Тип: Детский
+                    br
+                    | Время/Цена: 1 час / 70 грн
+            
+            +catalogBlock('Велошлем детский KLS Smarty Red-Colored S', './img/catalog-img-1-small.jpg')
+            +catalogBlock('Защита локтя XLC KW-S02 Black S/M', './img/catalog-img-2-small.jpg')
+            +catalogBlock('Очки Bobster Shield II, Blue Frame, Smoked Lens', './img/catalog-img-3-small.jpg')
+        
+          .text-center
+            .clear25
+            a(href="#!").btn.btn--green
+              i.fa.fa-long-arrow-right
+              | Смотреть еще
+      
+      section.section.rental-conditions
+        .container
+          
+          a(href="#!").btn.btn--green.btn--background
+            i.fa.fa-long-arrow-right
+            span.hidden-xs Смотреть условия проката
+            span.visible-xs-inline-block Условия проката
+        
+      
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
+    script().
+      (function(){
+        $('.header__nav-ul li.header__nav-li:nth-child(2)').addClass('active');
+        $('.angle__wrapper-right').attr('style', 'background-image: url(\'./img/about-img-4.jpg\')')
+        $('.angle__img img').attr('src', './img/about-img-4.jpg')
+      })();

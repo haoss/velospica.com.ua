@@ -1,0 +1,50 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Страница 404' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Страница 404' + ' - Спица' //title страницы для генерации верстки  
+
+  head
+    meta(charset='utf-8')
+  
+    title= pageTitle
+    meta(name='description', content='')
+  
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+  
+    link(rel='stylesheet', href='./font/font-awesome/css/font-awesome.min.css')
+    link(rel='stylesheet', href='./font/webfontkit-20180301-053825/stylesheet.css')
+    link(rel='stylesheet', href='./css/main.css')
+
+  body
+    
+    .page404__wrapper
+      .page404__container
+        .page404__content
+          .page404__content-wrapper
+            img(src="./img/stub-logo.png", alt="").page404__content-logo 
+            img(src="./img/stub-text.png", alt="").page404__content-text
+            .page404__content-title Упс! Ошибка 404
+            p Ищете что-то инетресное на нашем сайте?
+              br
+              | К сожалению, страница которую вы запрашиваете, не существует... 
+              br
+              | Переходите на главную страницу - там Вы сможете найти много полезной информации.
+            a(href="index.html").btn.btn--red 
+              i.fa.fa-long-arrow-right
+              | перейти на главную
+                
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    //- script(src="./js/libs.js")
+    //- include ./_include/_footer-js
+    //- script(src="./js/common.js")
+    

@@ -1,0 +1,184 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Условия проката' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Условия проката' + ' - Спица' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      
+      .breadcrumbs
+        .container
+          ul
+            li
+              a(href="index.html")
+                i.fa.fa-home
+                | Главная
+      
+      section.section.angle.angle--reverse.no--p-bottom
+        
+        +angleWrapper
+        
+        .container
+          .row
+            .col-lg-6.col-md-7.col-sm-8
+              
+              .angle__img
+                img(src="./img/about-img-1.jpg", alt="").img-responsive
+          
+              .section__head.section__head--yellow.section__head--left.section__head--thin
+                .section__head-wrapper
+                  div
+                    .section__head-icon
+                      div
+                        +imgSvgVelo
+                  div
+                    h1 Условия проката
+              
+              .angle__content
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+    
+      section.section.how-to-use.no--p-bottom
+        .container
+          
+          .section__head.section__head--green.section__head--479row
+            .section__head-wrapper
+              div
+                .section__head-icon
+                  div
+                    +imgSvgVelo
+              div
+                h1 Как пользоваться прокатом
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        
+          .how-to-use__row
+            div
+              .how-to-use__block
+                .how-to-use__block-img
+                  img(src="./img/icon/icon-how-use-1.svg", alt="")
+                .how-to-use__block-title Заказ велосипеда
+                p Рекомендуется предварительно звонить по 
+                  i.fa.fa-phone 
+                  | +38099 999 69 99 и заказывать необходимое  количество.
+            div
+              .how-to-use__block
+                .how-to-use__block-img
+                  img(src="./img/icon/icon-how-use-2.svg", alt="")
+                .how-to-use__block-title Встреча на месте
+                p Заполнение бланка проката. Оставьте залог или документ.
+            div
+              .how-to-use__block
+                .how-to-use__block-img
+                  img(src="./img/icon/icon-how-use-3.svg", alt="")
+                .how-to-use__block-title Выдача велосипеда
+                p Велосипед выдается и принимается чистый, исправный, с обязательным осмотром. 
+            div
+              .how-to-use__block
+                .how-to-use__block-img
+                  img(src="./img/icon/icon-how-use-4.svg", alt="")
+                .how-to-use__block-title Возврат велосипеда
+                p Сдать велосипед в оговоренное заранее время, либо Вы можете на своё усмотрение продлить пользование.
+
+    
+      section.section.properties
+        .container
+          
+          .section__head.section__head--yellow
+            .section__head-wrapper
+              div
+                .section__head-icon
+                  div
+                    +imgSvgVelo
+              div
+                h1 Стоимость проката
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+        
+          .row
+            .col-md-10.col-md-push-1
+              
+              .properties__content
+                
+                .properties__content-head Предоставляемые Тарифы
+                .table-responsive
+                  table.properties__content-table
+                    thead
+                      tr
+                        th(align="left" nowrap) Период
+                        th(align="left" nowrap) Длительность проката
+                        th(align="right" nowrap) Стоимость, грн
+                    tbody
+                      tr
+                        td(align="left" rowspan="2" valign="top" style="border-right: 1px solid #d5e8dd") Любой день
+                        td(align="left") 1 день
+                        td(align="right") 50
+                      tr
+                        td(align="left") 1 сутки
+                        td(align="right") 70
+                      tr
+                        td(align="left" rowspan="4" valign="top" style="border-right: 1px solid #d5e8dd") Будний день
+                        td(align="left") 1 час
+                        td(align="right") 80
+                      tr
+                        td(align="left") 3 часа
+                        td(align="right") 100
+                      tr
+                        td(align="left") 1 день
+                        td(align="right") 80
+                      tr
+                        td(align="left") 1 сутки
+                        td(align="right") 100
+                      tr
+                        td(align="left" rowspan="4" valign="top" style="border-right: 1px solid #d5e8dd") Выходные и праздники
+                        td(align="left") 1 час
+                        td(align="right") 80
+                      tr
+                        td(align="left") 3 часа
+                        td(align="right") 100
+                      tr
+                        td(align="left") 1 день
+                        td(align="right") 80
+                      tr
+                        td(align="left") 1 сутки
+                        td(align="right") 100
+                      tr
+                        td(align="left" rowspan="4" valign="top" style="border-right: 1px solid #d5e8dd") Долгосрочный прокат
+                        td(align="left") рабочая неделя
+                        td(align="right") 500
+                      tr
+                        td(align="left") 2 полных недели 
+                        td(align="right") 1000
+                      tr
+                        td(align="left") 1 месяц
+                        td(align="right") 2800
+              
+      
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
+    script().
+      (function(){
+        $('.header__nav-ul li.header__nav-li:nth-child(3)').addClass('active');
+        $('.angle__wrapper-right').attr('style', 'background-image: url(\'./img/about-img-5.jpg\')')
+        $('.angle__img img').attr('src', './img/about-img-5.jpg')
+      })();

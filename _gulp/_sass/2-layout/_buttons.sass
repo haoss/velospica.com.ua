@@ -1,0 +1,86 @@
+/* buttons */
+
+.btn
+  display: inline-block
+  padding: 0 20px
+  margin-bottom: 0
+  font-size: rem(16)
+  font-weight: 400
+  text-align: center
+  white-space: nowrap
+  vertical-align: middle
+  touch-action: manipulation
+  cursor: pointer
+  user-select: none
+  background:
+    image: none
+    color: transparent
+  border: 2px solid $primary-color
+  border-radius: 0px
+  height: 50px
+  line-height: 46px
+  text-decoration: none
+  transition: color 0.35s, background 0.35s, border 0.35s
+  color: $primary-color
+  font-family: $font-roboto-bold
+  text-transform: uppercase
+  .fa
+    font-size: rem(20)
+    margin-right: 10px
+    display: inline-block
+    line-height: 1
+    vertical-align: -1px
+
+  &:hover, &:focus, &:active
+    outline: none
+    background-color: $primary-color
+    color: $color-white
+
+  &--red
+    border-color: $color-red
+    color: $color-red
+    &:hover, &:focus
+      background-color: $color-red
+      color: $color-white
+    &.btn--background
+      background-color: $color-red
+      color: $color-white
+      &:hover, &:focus
+        background-color: transparent
+        color: $color-red
+  &--green
+    border-color: $color-green
+    color: $color-green
+    &:hover, &:focus
+      background-color: $color-green
+      color: $color-white
+    &.btn--background
+      background-color: $color-green
+      color: $color-white
+      &:hover, &:focus
+        background-color: transparent
+        color: $color-green
+  &--yellow
+    border-color: $color-yellow
+    color: $color-yellow
+    &:hover, &:focus
+      background-color: $color-yellow
+      color: $color-white
+    &.btn--background
+      background-color: $color-yellow
+      color: $color-white
+      &:hover, &:focus
+        background-color: transparent
+        color: $color-yellow
+  &--blue
+    border-color: $color-blue
+    color: $color-blue
+    &:hover, &:focus
+      background-color: $color-blue
+      color: $color-white
+    &.btn--background
+      background-color: $color-blue
+      color: $color-white
+      &:hover, &:focus
+        background-color: transparent
+        color: $color-blue

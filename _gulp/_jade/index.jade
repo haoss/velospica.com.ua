@@ -1,0 +1,218 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Главная' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Главная' + ' - Спица' //title страницы для генерации верстки  
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    .content
+      
+      .main-slider
+        .main-slider__carousel
+          .main-slider__block(style="background-image: url('./img/main-banner-1.jpg')")
+          .main-slider__block(style="background-image: url('./img/main-banner-1.jpg')")
+          .main-slider__block(style="background-image: url('./img/main-banner-1.jpg')")
+      
+        .mouse
+          a(href="#directions").anchor
+            img(src="./img/icon/icon-mouse.svg", width="22", height="40" alt="")
+      
+      section#directions.section.directions
+        .container
+          
+          .section__head.section__head--yellow.section__head--479row
+            .section__head-wrapper
+              div
+                .section__head-icon
+                  div
+                    +imgSvgVelo
+              div
+                h1 Направления деятельности
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          
+          .directions__row
+            
+            mixin advantagesBlock(title, img, className)
+              div
+                a(href="hire-category.html" class='directions__block ' + className)
+                  .directions__block-lines
+                    div
+                    div
+                    div
+                    div
+                  .directions__block-img
+                    img(src= img, alt="")
+                  .directions__block-title
+                    span= title
+            
+            +advantagesBlock('Прокат', './img/direction-img-1.png', 'directions__block--green')
+            +advantagesBlock('Ремонт', './img/direction-img-2.png', 'directions__block--green')
+            +advantagesBlock('Велокафе', './img/direction-img-3.png', 'directions__block--green')
+      
+      section.section.angle
+        
+        +angleWrapper
+        
+        .container
+          .row
+            .col-lg-6.col-md-7.col-sm-8
+              
+              .angle__img
+                img(src="./img/about-img-1.jpg", alt="").img-responsive
+          
+              .section__head.section__head--green.section__head--left.section__head--thin
+                .section__head-wrapper
+                  div
+                    .section__head-icon
+                      div
+                        +imgSvgVelo
+                  div
+                    h1 О нас
+              
+              .angle__content
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                
+                .clear15
+                
+                a(href="#!").btn.btn--red
+                  i.fa.fa-long-arrow-right
+                  | Связаться с нами
+      
+      section.section.advantages
+        .container
+          
+          .section__head.section__head--yellow
+            .section__head-wrapper
+              div
+                .section__head-icon
+                  div
+                    +imgSvgVelo
+              div
+                h1 Почему мы
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+          
+          .advantages__row
+            
+            mixin advantagesBlock(number, title, img, text)
+              div
+                .advantages__block
+                  .advantages__block-head.advantages__block-head--yellow
+                    div
+                      .advantages__block-icon
+                        div
+                          span= number
+                    div= title
+                  .advantages__block-wrapper
+                    .advantages__block-img(style="background-image: url('"+img+"')")
+                    div
+                      p= text 
+            
+            +advantagesBlock('01', 'Преимущество компании', './img/img-advantages-1.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+            +advantagesBlock('02', 'Преимущество компании', './img/img-advantages-2.png', 'Lorem ipsum dolor sit amet')
+            +advantagesBlock('03', 'Преимущество компании', './img/img-advantages-1.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.')
+            +advantagesBlock('04', 'Преимущество компании приемущество компании', './img/img-advantages-2.png', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
+    
+      section.section.angle.angle--contacts
+        
+        .angle__wrapper.angle__wrapper--map
+          .angle__wrapper-left
+            +svgCorner
+          .angle__wrapper-right
+            #map_canvas
+              // Google Map
+              script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
+              script.
+                function initialize() {
+                var myLatlng = new google.maps.LatLng(50.0560824,36.2668287);
+                var map_options = {
+                zoom: 17,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: myLatlng,
+                scrollwheel: false,
+                disableDefaultUI: true
+                }
+                var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
+                var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map
+                });
+                /* Remove if you dont want B/W Google Map */
+                /*
+                var styles = [
+                {
+                featureType: "all",
+                stylers: [
+                { saturation: -100 }
+                ]
+                }
+                ];
+                map.setOptions({styles: styles});
+                */
+                }
+                google.maps.event.addDomListener(window, 'load', initialize);
+              // Google Map Ends!
+
+        
+        .container
+          .row
+            .col-lg-6.col-md-7.col-sm-9
+          
+              .section__head.section__head--green.section__head--left.section__head--thin.section__head--479row
+                .section__head-wrapper
+                  div
+                    .section__head-icon
+                      div
+                        +imgSvgVelo
+                  div
+                    h1 Приезжайте к нам в гости
+              
+              .angle__content
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                
+                .contacts
+                  .contacts__contact
+                    .contacts__contact-title Всегда на связи
+                    i.fa.fa-phone
+                    | +38(099) 032 123 23
+                  .contacts__contact
+                    .contacts__contact-title Адрес
+                    i.fa.fa-map-marker
+                    | г. Харьков, Белгородское шоссе 7а
+                  .contacts__contact
+                    .contacts__contact-title Режим работы
+                    i.fa.fa-clock-o
+                    | +38(099) 032 123 23
+                  .contacts__contact
+                    .contacts__contact-title Следите за новостями в соц сетях
+                    .contacts__social
+                      a(href="#!")
+                        i.fa.fa-facebook
+                      a(href="#!")
+                        i.fa.fa-instagram
+                      a(href="#!")
+                        i.fa.fa-twitter
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    // Load Scripts
+    script(src="./js/libs.js")
+    include ./_include/_footer-js
+    script(src="./js/common.js")
+    
